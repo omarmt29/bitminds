@@ -1,113 +1,105 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main className="h-full w-full bg-[url('/bg.jpg')] bg-cover	bg-no-repeat	bg-center	">
+
+      <div className="h-screen w-full flex flex-col gap-10 justify-center items-center px-10 sm:px-0">
+
+        <Image
+          src="/logo.png"
+          width={200}
+          height={200}
+          alt="Picture of the author"
+
+        />
+
+        <p className='text-white text-1xl sm:text-4xl text-center font-extralight'>¡Bienvenido a Bitminds, tu puerta de entrada al mundo del desarrollo web!</p>
+
+      </div>
+
+      <div className='grid md:grid-cols-1 lg:grid-cols-2  px-5  container m-auto gap-10 pt-12 md:pt-32 border-t-2 border-gray-800'>
+        <div className='w-full justify-center flex  h-full '>
+          <div className='justify-center items-center gap-4 w-full flex flex-col'>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
+              src="/logo.png"
               width={100}
-              height={24}
-              priority
+              height={100}
+              alt="Picture of the author"
+              className='mb-10'
+
             />
-          </a>
+            <h2 className='text-amber-200 text-2xl'>Descubre qué es Bitminds</h2>
+            <p className='text-1xs text-center text-gray-300'>Bitminds es un grupo de conocimiento dedicado a brindar recursos y apoyo a personas interesadas en aprender sobre desarrollo web. Nos enfocamos en proporcionar información clara y accesible para aquellos que deseen sumergirse en el fascinante mundo de la programación y el diseño web. Aquí encontrarás contenido educativo, tutoriales, consejos y trucos para ayudarte a desarrollar tus habilidades y conocimientos.</p>
+          </div>
+        </div>
+        <div className='w-full justify-center flex h-full '>
+          <div>
+            <img className='w-full h-full md:h-auto lg:h-full' src="/img-1.png" alt="" />
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className='grid md:grid-cols-1 lg:grid-cols-2   px-5   container m-auto gap-10 mt-12 pt-12 md:mt-32  md:pt-32 border-t-2 border-gray-800'>
+
+
+
+        <div className='w-full justify-center flex h-full order-2 sm:order-none '>
+          <div>
+            <img className='w-full h-full' src="/img-2.png" alt="" />
+          </div>
+        </div>
+
+        <div className='w-full justify-center flex h-full '>
+          <div className='justify-center items-center gap-4 w-full flex flex-col'>
+            <p className='text-8xl text-yellow-400 mb-10'>?</p>
+            <h2 className='text-amber-200 text-2xl text-center'>¿Qué puedes esperar de Bitminds?</h2>
+            <p className='text-1xs text-center text-gray-300'>En Bitminds, nos comprometemos a ofrecer contenido de calidad que sea fácil de entender y aplicar. Nuestro objetivo es desmitificar el desarrollo web y hacerlo accesible para todos, incluso para aquellos que no tienen experiencia previa en el tema. A través de nuestros artículos, videos y recursos interactivos, aprenderás los conceptos básicos, las mejores prácticas y las últimas tendencias en el campo del desarrollo web.</p>
+          </div>
+        </div>
+
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className='flex container m-auto gap-10 mt-12 pt-12 md:mt-32 px-5  md:pt-32 border-t-2 border-gray-800'>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className='w-full justify-center flex h-full '>
+          <div className='justify-center items-center gap-4 w-full flex flex-col'>
+            <a href="https://chat.whatsapp.com/FL05wDMG4PL57Ukhjkh0bJ" target='_blank'><img className='w-20 h-auto mb-10' src="/ws.png" alt="" /></a>
+            <h2 className='text-amber-200 text-2xl text-center'>Únete a nuestro grupo de WhatsApp</h2>
+            <p className='text-1xs text-center text-gray-300 max-w-5xl'>¿Quieres ser parte de una comunidad activa y en crecimiento en el mundo del desarrollo web? ¡Únete a nuestro grupo de WhatsApp! Aquí tendrás la oportunidad de interactuar con personas apasionadas por el tema, hacer preguntas, recibir asesoramiento personalizado y compartir tus logros y desafíos en el aprendizaje del desarrollo web. Nuestro grupo es un espacio seguro y acogedor donde todos son bienvenidos, sin importar su nivel de conocimiento.</p>
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
+
+
+      <div className='flex container md:m-auto gap-10 mt-12 pt-12 md:mt-32  md:pt-32  border-t-2 border-gray-800'>
+
+        <div className='w-full justify-center  flex h-full '>
+          <div className='justify-center items-center gap-4 w-full flex px-5 flex-col'>
+            <p className='text-8xl text-center mb-5 sm:mb-10 text-yellow-400'>?</p>
+            <h2 className='text-amber-200 text-4sm sm:text-2xl text-center max-w-5xl'>¿Cómo integrarse a Bitminds a través de nuestro grupo de WhatsApp? Es muy sencillo unirse a nuestro grupo de WhatsApp. Solo tienes que seguir estos pasos:</h2>
+            <ul className='text-gray-300 list-decimal space-y-3 mt-4 '>
+              <li>
+                Haz clic en el enlace de invitación al grupo de WhatsApp que se encuentra en el logo de whatsapp en nuestra página web
+              </li>
+              <li>
+                Abre el enlace en tu dispositivo móvil y confirma tu participación en el grupo.
+              </li>
+              <li>
+                ¡Listo! Ahora podrás acceder al grupo de WhatsApp y comenzar a explorar, aprender y compartir con otros miembros de Bitminds.
+              </li>
+            </ul>
+            <p className='text-gray-300 text-sm text-center max-w-5xl mt-10 bg-zinc-800 px-3 py-4 sm:p-9'>No importa si eres un principiante absoluto o si ya tienes algunos conocimientos en desarrollo web, en Bitminds encontrarás el apoyo y los recursos que necesitas para seguir creciendo en esta apasionante área. Únete a nuestra comunidad de aprendizaje y descubre cómo el desarrollo web puede abrirte un mundo de oportunidades.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div className='flex justify-center gap-10 mt-32 py-12 bg-zinc-900 border-t-2 border-yellow-300'>
+        <p className='text-center text-white mb-0 pb-0'>¡Explora Bitminds y sumérgete en el fascinante mundo del desarrollo web hoy mismo!</p>
+      </div>
+
     </main>
   )
 }
